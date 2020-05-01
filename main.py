@@ -4,7 +4,6 @@ from dice import random_dice
 def regras():
     return print("Escolha qual tipo de dado você quer utilizar, e quantas vezes você vai querer rodar aquele dado, você também pode escolher mais de um dado\nDados permitidos: D4,D6,D8,D10,D12,D20")
 
-
 def play1():
     print('-'*50)
     print("Deseja rolar quantos dados?")
@@ -15,13 +14,13 @@ def play1():
     j = 0
     for i in range(1,n+1):
         k = int(input())
-        while k >= 4 or k <=20 or k % 2 == 0:
-            j = j + random_dice(k) 
-            print("Roll nº",i,"=", random_dice(k))
-            if k < 4 or k > 20 or k %2 != 0:
-                break
+        
+        j = j + random_dice(k) 
+        print("Roll nº",i,"=", random_dice(k))
+
 
     print("Você rolou um total de",n,"dados, sendo a soma deles de:",j)
+
 def main():
     print("-"*60)
     print(" "*15, "Bem vindo ao DADO virtual")
