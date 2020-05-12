@@ -1,0 +1,1 @@
+script simples de dados
